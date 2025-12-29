@@ -1,0 +1,107 @@
+/*=========================
+===== Назва консолі   =====
+=========================*/
+.console-name {
+  color: #7CFFB2;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(124, 255, 178, 0.4);
+  font-size: 30px;
+}
+.console-line {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: consoleIn 0.3s ease-in-out forwards;
+}
+
+/*========================
+====   Анімації       ====
+========================*/
+@keyframes btn-active{
+    0%{ opacity: 1; }
+    100%{ opacity: 0; }
+}
+@keyframes consoleIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*=========================
+====   DOM Та інше     ====
+=========================*/
+html { background-color: #0B0F0E; }
+
+.console-term { background: gray; }
+
+.console-term:hover { box-shadow:0 0 10px rgb(200, 200, 200); }
+
+div:hover { box-shadow: 0 0 10px rgb(200, 200, 200); }
+
+/*===============================
+=======   Для усього      =======
+===============================*/
+* {
+    font-family: 'JetBrains Mono', monospace;
+    color:#E0E0E0;
+    margin: 10px;
+    font-weight: 550;
+}
+
+/*=========================
+====   Кнопочки ✨     ====
+=========================*/
+button:active { transform: scale(0.90);}
+
+.console-confirm-btn, .console-reset{
+    display:inline-block;
+    background: grey;
+    border: 3px double darkgray;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin:0px;
+}
+.console-confirm-btn:hover, .console-reset:hover {
+    box-shadow: 0 0 10px rgb(200, 200, 200);
+}
+.animation-blink {
+    animation-name:btn-active;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+}
+.console-container {
+    border:2px solid #2A2A2A;
+    padding-top: 10px;
+}
+
+/*=========================
+== Очистка консолі меню  ==
+=========================*/
+h3{
+    margin-top: 20px;
+    text-align-last: center;
+}
+/*Кнопочки ✨*/
+button { 
+    display: inline;
+    border-radius: 10px;
+    font-size: 12px;
+    
+}
+.return-console {
+    background-color: #2196F3;
+    border: 3px solid #0080E7;
+    height: 25px;
+}
+.clear-console-btn {
+    border:3px solid #FF0000;
+    background: #EE2A2A;
+    height: 25px;
+}
+.clear-console-btn:hover {
+    box-shadow: 0 0 10px #FF3939;
+}
+.return-console:hover {
+    box-shadow: 0 0 10px #009DFF;
+}
